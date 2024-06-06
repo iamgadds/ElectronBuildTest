@@ -1,0 +1,5 @@
+/publish
+/node_modules
+/logs
+/dist
+/package-lock.json

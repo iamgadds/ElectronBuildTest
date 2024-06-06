@@ -1,0 +1,37 @@
+{
+  "name": "electron-websocket-demo",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.electron.websocket.demo",
+    "win": {
+      "target": "nsis",
+      "artifactName": "${productName} Setup ${version}.${ext}"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "node_modules"
+    ],
+    "extraFiles": [
+      {
+        "from": "publish/",
+        "to": "resources/publish/",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "devDependencies": {
+    "electron": "^12.0.0",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "electron-log": "^5.1.5"
+  }
+}
